@@ -115,12 +115,3 @@ section {
     margin: 0 5px;
 }
 
-/* styling the hero button */
-.hero-form-button {
-    color: #fce138;
-    background-color: #024e76;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-}
-/* end styling the hero button */

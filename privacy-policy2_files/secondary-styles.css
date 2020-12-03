@@ -1,0 +1,25 @@
+.hero {
+    background-image: url("../images/hero-bg.jpg");
+    height: 250px;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    text-align: center;
+}
+
+  .secondary-content {
+    width:80%;
+    margin: 20px 100px 20px 100px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #024e76;;
+  }
+
+  ul {
+    margin:15px 20px 15px 20px
+}
+
+li {
+    color:#39a6b2;
+}
+

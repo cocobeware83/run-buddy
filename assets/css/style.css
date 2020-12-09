@@ -10,7 +10,7 @@ body {
 }
 
 
-/* header and nav bar styling */
+/* styling header and nav bars */
 
 header {
   padding: 20px 35px;
@@ -50,7 +50,7 @@ header nav ul li a {
   font-size: 1.55vw;
 }
 
-/* footer styling */
+/* styling footer */
 footer {
   background: #fce138;
   padding: 40px 35px;
@@ -75,12 +75,12 @@ footer a {
   color: #024e76;
 }
 
-/* styling for all section tags */
+/* section tags style */
 section {
   padding: 60px;
 }
 
-/* hero styling */
+/* styling hero */
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
@@ -88,7 +88,7 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
 .hero-cta {
@@ -145,7 +145,8 @@ section {
   font-size: 16px;
 } 
 
-/* section-title styling */
+
+/* styling section-title */
 .section-title {
   font-size: 48px;
   border-bottom: 3px solid;
@@ -164,7 +165,7 @@ section {
   border-color: #39a6b2;
 }
 
-/* styling for 'what we do' */
+/* what we do styling */
 
 .intro p {
   line-height: 1.7;
@@ -176,7 +177,7 @@ section {
 }
 
 
-/* styling for 'what you do' */
+/* what you do styling */
 .steps { 
   background: #fce138;
 }
@@ -229,7 +230,7 @@ section {
   color: #024e76;
 }
 
-/* styling for 'meet the trainers' */
+/* trainers styling */
 .trainers {
   width: 100%;
   margin: 0 auto;
@@ -270,19 +271,57 @@ section {
 
 /* service plans styling */
 
+.services {
+  background: #fce138; 
+}
+
+.service-grid-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .service-grid-container {
+  background: lightyellow;
+  width: 80%;
   display: grid;
+  grid-template-columns: 1fr repeat(2, 4fr);
+  grid-template-rows: repeat(5, 1fr) 2fr;
+  border: 2px solid #024e76;
+  color:  #024e76;
+  font-size: 1.2rem;
 }
 
 .service-grid-item {
-  width: 200px;
-  height: 50px;
-  background-color: orange;
-  border: solid;
-  color: black;
+  padding: 15px 0;
+  border: 2px solid #024e76;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* styling for 'reach out' */
+.service-grid-item.basic {
+  grid-column: 2 / span 1;
+}
+
+.service-grid-item.both {
+  grid-column: 2 / span 2;
+}
+
+.service-grid-item.cancel {
+  writing-mode: vertical-lr;
+  grid-column: 1;
+  grid-row: 1 / -1;
+  transform: rotate(180deg);
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* reach out styling */
 .contact {
   background: #024e76;
 }
@@ -360,7 +399,7 @@ section {
   display: flex;
 }
 
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+/* media queries styling */
 @media screen and (max-width: 980px) {
   header {
     padding-bottom: 0;
@@ -394,6 +433,7 @@ section {
   .hero-cta {
     text-align: center;
   }
+
   .section-title {
     width: 80%;
   }
@@ -407,9 +447,8 @@ section {
   }
 }
 
-/* MEDIA QUERY FOR TABLETS AND SMALLER */
+/* media queries styling for tablets and smaller */
 @media screen and (max-width: 768px) {
-  
   section {
     padding: 30px 15px;
   }
@@ -435,11 +474,29 @@ section {
   .step-text {
     flex: 100%;  
   }
+  
+  .service-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service-grid-item.basic {
+    grid-column: 1;
+  }
+
+  .service-grid-item.both {
+    grid-column: 1 / -1;
+  }
+
+  .service-grid-item.cancel {
+    transform: none;
+    writing-mode: unset;
+    grid-column: 1 / -1;
+    grid-row: -1;
+  }
 }
 
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/* media queries styling for phones and smaller */
 @media screen and (max-width: 575px) {
- 
   .hero-form button {
     width: 100%;
   }
@@ -463,7 +520,7 @@ section {
   .contact-info > * {
     flex: 0 100%;
   }
-  
+
   .contact-form {
     order: 3;
   }
